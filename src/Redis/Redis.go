@@ -41,7 +41,7 @@ func GetPushLastUIDObj() (interface{},error) {
 	rds := Client.Get()
 	defer rds.Close()
 	_ , err = rds.Do("SELECT",13)
-	resp, err = rds.Do("BRPOPLPUSH","push_queue", "", 43600)
+	resp, err = rds.Do("BRPOPLPUSH","push_queue", "push_queue_temp", 43600)
 	if err != nil{
 		_ = logs.WriteLog("run.log", fmt.Sprintf("%s", err))
 		return nil, err

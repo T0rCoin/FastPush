@@ -16,11 +16,11 @@ func PushAllStart(text string) bool {
 	for i := 0; i < 1000; i++ {//起1000个goroutine
 
 		time.Sleep(time.Microsecond * 100)
-
+        
 		go ThreadPush(text)
 
 	}
-
+    fmt.Println("Push Thread Read -> Start")
 	close(Start)
 
 	_ = logs.WriteLog("run.log","Push Start")

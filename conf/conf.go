@@ -8,7 +8,7 @@ import (
 )
 
 const(
-	FilePath string = "./conf/conf.ini"
+	FilePath string = "/root/BadOrange/conf/conf.ini"
 )
 
 var RedisConf = map[string]string{

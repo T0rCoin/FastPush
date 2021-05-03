@@ -124,5 +124,5 @@ func Push(c * gin.Context)  {
 		"msg": "success",
 	})
 	_ = logs.WriteLog("http.log", fmt.Sprintf("Success Request-IP:%s", IP.GetRealIp(c.Request)))
-
+	
 }
